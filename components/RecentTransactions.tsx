@@ -9,7 +9,8 @@ import { BankTabItem } from './BankTabItem';
 import BankInfo from './BankInfo';
 import { TransactionsTable } from './TransactionsTable';
 import { Pagination } from './Pagination';
-import Image from 'next/image';
+import { Suspense } from 'react';
+import Loading from '@/app/(root)/loading';
 
 export const RecentTransactions = ({
 	accounts,
