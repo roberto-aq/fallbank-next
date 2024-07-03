@@ -20,7 +20,7 @@ export const Footer = ({ user, type = 'desktop' }: FooterProps) => {
 				}`}
 			>
 				<p className='text-xl font-bold text-gray-700'>
-					{user.name[0]}
+					{user.firstName[0]}
 				</p>
 			</div>
 
@@ -30,7 +30,7 @@ export const Footer = ({ user, type = 'desktop' }: FooterProps) => {
 				}
 			>
 				<h1 className='text-14 truncate font-semibold text-gray-700'>
-					{user.name}
+					{user.firstName}
 				</h1>
 				<p className='text-14 text-gray-600 font-normal truncate'>
 					{user.email}

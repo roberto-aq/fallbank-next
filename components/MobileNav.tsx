@@ -4,6 +4,8 @@ import {
 	Sheet,
 	SheetClose,
 	SheetContent,
+	SheetDescription,
+	SheetTitle,
 	SheetTrigger,
 } from '@/components/ui/sheet';
 import { sidebarLinks } from '@/constants';
@@ -13,6 +15,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { LogoMobile } from './LogoMobile';
 import { Footer } from './Footer';
+import { PlaidLink } from './PlaidLink';
 
 export const MobileNav = ({ user }: MobileNavProps) => {
 	const pathname = usePathname();
@@ -30,7 +33,9 @@ export const MobileNav = ({ user }: MobileNavProps) => {
 					/>
 				</SheetTrigger>
 				<SheetContent side='left' className='border-none bg-white'>
-					<LogoMobile />
+					<SheetTitle>
+						<LogoMobile />
+					</SheetTitle>
 					<div className='mobilenav-sheet'>
 						<SheetClose asChild>
 							<nav className='flex h-full flex-col gap-6 pt-16 text-white'>
@@ -76,7 +81,8 @@ export const MobileNav = ({ user }: MobileNavProps) => {
 										</SheetClose>
 									);
 								})}
-								USER
+
+								<PlaidLink user={user} />
 							</nav>
 						</SheetClose>
 						<Footer user={user} type='mobile' />
